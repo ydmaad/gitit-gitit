@@ -29,7 +29,7 @@ body {
   --animate-blob2: blob2 15s infinite ease-in-out alternate;
   --animate-blob3: blob3 18s infinite ease-in-out reverse;
 
-  /* ✨ vw(화면 너비), vh(화면 높이)를 사용해 큼직하게 이동시킵니다 */
+  /* ✨ vw(화면 너비), vh(화면 높이)를 사용해 큼직하게 이동 */
   @keyframes blob1 {
     0%,
     100% {
