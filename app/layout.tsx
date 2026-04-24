@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import MultiFollowCursor from './components/MultiFollowCursor';
 
 export const metadata: Metadata = {
   title: '프론트엔드 개발자 양민애 포트폴리오',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <MultiFollowCursor></MultiFollowCursor>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
