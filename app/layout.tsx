@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="ko" className="scroll-smooth">
       <body>
-        <MultiFollowCursor></MultiFollowCursor>
-        <main>{children}</main>
+        <div className="bg-[#0F172A]">
+          <MultiFollowCursor></MultiFollowCursor>
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
