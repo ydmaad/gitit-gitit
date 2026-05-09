@@ -6,14 +6,13 @@ export interface Profile {
 }
 
 // 프로젝트 타입
-export interface Project {
+interface Project {
   id: number;
   title: string;
   description: string;
   tags: string[];
+  link: string;
   image: string;
-  githubUrl: string;
-  demoUrl?: string;
 }
 
 // 프로필 데이터
@@ -26,14 +25,24 @@ export const PROFILE_DATA: Profile = {
   keywords: ['Flexible', 'React Enthusiast', 'Team Player', 'Problem Solver'],
 };
 
+// 프로젝트 데이터
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Booklet',
-    description: 'Next.js 15와 Supabase를 활용한 개인 독서 기록 플랫폼입니다.',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'Supabase'],
-    image: '',
-    githubUrl: 'https://github.com/ydmaad/booklet',
-    demoUrl: '',
+    title: '별책부록(Booklet)',
+    description:
+      '사용자가 책의 바코드를 스캔하거나 ISBN으로 검색하여 책 정보를 가져오고, 독후감을 작성해 개인 서랍에 저장할 수 있는 웹앱',
+    tags: ['React', 'Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
+    link: 'https://booklet-v2.vercel.app/',
+    image: '/booklet.png',
+  },
+  {
+    id: 2,
+    title: '메디헬프(MediHelp)',
+    description:
+      '복용 중인 약을 효과적으로 관리하고 건강 정보를 공유할 수 있는 종합 디지털 헬스케어 플랫폼',
+    tags: ['React', 'Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
+    link: 'https://medi-help-seven.vercel.app/',
+    image: '/medihelp.png',
   },
 ];
