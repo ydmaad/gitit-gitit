@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import HeroSection from './components/HeroSection';
-import MainSection from './components/MainSection';
+import ProfileSection from './components/ProfileSection';
 import Navbar from './components/Navbar';
+import ProjectSection from './components/ProjectSection';
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
@@ -45,7 +46,8 @@ export default function Home() {
         <HeroSection></HeroSection>
       </section>
       <section className="snap-start">
-        <MainSection></MainSection>
+        <ProfileSection></ProfileSection>
+        <ProjectSection></ProjectSection>
       </section>
     </main>
   );
