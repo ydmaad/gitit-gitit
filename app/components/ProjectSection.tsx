@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { PROJECTS } from '../data';
+import Link from 'next/link';
 
 const ProjectSection = () => {
   return (
@@ -25,6 +26,11 @@ const ProjectSection = () => {
               key={project.id}
               className="group relative flex flex-col bg-neutral/40 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(139,92,246,0.15)] hover:-translate-y-2"
             >
+              <Link
+                href={`/projects/${project.id}`}
+                className="absolute inset-0 z-10"
+                aria-label={`${project.title} 상세 보기`}
+              />
               {/* 이미지 컨테이너 */}
               <div className="relative w-full h-56 overflow-hidden">
                 <Image
@@ -63,15 +69,15 @@ const ProjectSection = () => {
                   ))}
                 </div>
 
-                {/* 액션 버튼 */}
+                {/* 프로젝트 링크 */}
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn inline-flex items-center gap-2 text-sm font-bold text-white transition-all"
+                  className="relative z-20 w-fit group/btn inline-flex items-center gap-2 text-sm font-bold text-white transition-all"
                 >
                   <span className="relative">
-                    View Case Study
+                    View Project
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover/btn:w-full" />
                   </span>
                   <svg
