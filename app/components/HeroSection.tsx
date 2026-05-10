@@ -22,7 +22,7 @@ const HeroSection = () => {
       {/* 전면 콘텐츠 (로고 및 스크롤) */}
       <div className="relative z-30 flex flex-col items-center">
         <span
-          className={`text-6xl md:text-2xl text-[#F8FAFC] tracking-wider drop-shadow-md cursor-default select-none ${playfair.className}`}
+          className={`text-6xl md:text-6xl text-[#F8FAFC] tracking-wider drop-shadow-md cursor-default select-none ${playfair.className}`}
         >
           Min-ae
         </span>
